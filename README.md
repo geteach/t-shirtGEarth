@@ -5,7 +5,7 @@ The two goals for this style was
 1. To create a simplfied css; modifiying Material Design Lite
 2. Create higher contrast panel
 
-The <a> tags ids are created by Google Earth when user creates a place, line, polygon.
+The anchor tag ids are created by Google Earth when user creates a place, line, polygon.
 The most simple way to get the ids is to create all locations first then export to kml and open in text editor. 
 The placemark ids the internal anchors. **Not sure how stable this is, but all my files have worked for over 6 mths.
 
