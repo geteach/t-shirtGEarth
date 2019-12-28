@@ -227,8 +227,10 @@ html::-webkit-scrollbar-track {
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 600px) {
     .prev, .next,.caption {font-size: 11px}
+    .mediaIcon{top:15px;}
   }
   @media only screen and (max-height: 600px) {
+    .mediaIcon{top:30px;}
     .mediaContain  {
         width:100%;
         height:220px;
