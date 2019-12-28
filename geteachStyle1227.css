@@ -1,10 +1,10 @@
 body, html{
-	font-size: 14px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 20px;
     font-family: Roboto,Noto,sans-serif;
     -webkit-font-smoothing: antialiased;
-	color: #DADCE0;
+    color: #DADCE0;
 }
 .Qtext{
     font-size: 18px;
