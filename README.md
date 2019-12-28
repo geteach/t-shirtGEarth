@@ -1,5 +1,5 @@
 # t-shirtGEarth - Proof of Concept Only 
-https://earth.google.com/web/data=Mj8KPQo7CiExNzMzU3VsS2dfekRvMDI0UDBSMEcyUWVKZ1NHN2d4dFASFgoUMEJDQTc5MEQ3QzBCQjk3QzAxNzA
+Google Earth Example file: https://earth.google.com/web/data=Mj8KPQo7CiExNzMzU3VsS2dfekRvMDI0UDBSMEcyUWVKZ1NHN2d4dFASFgoUMEJDQTc5MEQ3QzBCQjk3QzAxNzA
 
 Working on creating new style for Google Earth on Web/mobile.
 
