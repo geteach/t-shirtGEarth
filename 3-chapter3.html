@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Simple Audio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+		<link rel="stylesheet" href="https://geteach.com/scripts/newearth/geteachStyle1227.css" type="text/css" />
+		<script>
+        	var startTimeMS = 0;
+            var timerId;
+            var timerStep; 	
+			function playPause() {
+            var image = document.getElementById('controlIcon');
+			   if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
+                    getRemainingTime();
+					document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+					document.getElementById('playButton').innerHTML = 'Play';
+                    document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+				} else {
+					document.getElementById('playIcon').innerHTML = '<i class="material-icons">pause</i>';
+					document.getElementById('playButton').innerHTML = 'Pause';
+                    document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">pause</i>';
+                    playTour();	
+				}
+            };    
+            function playTour() {
+            var videoI = document.getElementById("videoI");
+                if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
+                    startTimeMS = (new Date()).getTime();
+                        videoI.play();
+                };
+                videoI.onended = function() {
+                    videoI.load(); 
+                    document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+                    document.getElementById('playButton').innerHTML = 'Play';
+                    document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+                };							
+            };
+            function getRemainingTime(){
+                window.clearTimeout(timerId);
+                document.getElementById("videoI").pause();
+                timerStep -= ( (new Date()).getTime() - startTimeMS );
+            };					
+            window.onload = playTour;						
+	    </script>					
+	</head>
+	<body>
+		<div id="container">
+			<main class="panelMain">
+				<div class="videoContain" onclick="playPause()">
+                <video class="videoMedia" id="videoI" width="480" poster="https://storage.googleapis.com/geteachkml4/npr/chapter3Poster.jpg"><source src="https://storage.googleapis.com/geteachkml4/npr/people.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                    <span class="mediaIcon mdl-color-text--white" id="mediaIcon">
+                        <i class="material-icons">play_arrow</i>
+                    </span>
+                </div>	
+				<div class="content">		
+                    <div class="title">					
+						Chapter 3 - People
+                    </div>	
+                    <div class="snippet">
+                        The lives of the workers who made our shirts
+                    </div>			
+					<span onclick="playPause()" class="mdl-chip mdl-chip--contact" id="playSpan">
+						<span class="mdl-chip__contact mdl-color-text--white" id="playIcon"><i class="material-icons">play_arrow</i></span>
+						<span class="mdl-chip__text" id="playButton">Play</span>
+					</span>		
+					<div class="description">		
+                        <p class="text">This is the world behind our T-shirt: women like Jasmine and Doris working long hours in difficult conditions, dreaming of better lives for their families.</p> <p class="text">After reading this <a href="https://apps.npr.org/tshirt/#/people" target="_blank">webpage</a>, describe some advantages and disadvantages of the garment industry on people's lives.</p>
+                        <hr>
+                        <p class="text">Credit: NPR's <a href="https://apps.npr.org/tshirt/#/title" target="_blank">Planet Money Makes a T-Shirt</a>...Please do not forget to support you local <a href="http://www.npr.org/stations/" target="_blank">NPR Public Radio Station</a>.</p>		
+					</div>
+				</div>
+				<div class="footer">
+					<div class="logoLeft">
+						<a href="https://twitter.com/geteach" target="_blank">
+							<img src="https://storage.googleapis.com/geteachkml4/logogeteachtemp.png" >
+						</a>
+					</div>
+                    <div class="logoRight" style="display:none">
+                        <a href="#080D7483990BBAFFD234;Flyto" id="click1"></a>
+                        <a href="#0587852B020BBB0027AD;Flyto" id="click2"></a>
+                        <a href="#03B416EFA10BBB00789D;Flyto" id="click3"></a>
+                        <a href="#0CD9DB6BAA0BBAF47491;Flyto" id="click4"></a>
+                        <a href="#0F58FA0E090BBAF6C900;Flyto" id="click5"></a>
+                        <a href="#02273B58390BBAF8473F;Flyto" id="click6"></a>
+                        <a href="#0A07B31C760BBB0168B5;Flyto" id="click7"></a>
+                        <a href="#032142EFBF0BBB01FFFC;Flyto" id="click8"></a>
+                        <a href="#0EB952BE2B0BBAFA50FF;Flyto" id="click9"></a>
+                        <a href="#0E0893F64B0BBAFC05EE;Flyto" id="click10"></a>
+                        <a href="#03619680110BBB028253;Flyto" id="click11"></a>	
+                        <a href="#09484996FD0BBB036694;Flyto" id="click12"></a>	
+                        <a href="#07BB40E5ED0BB9AD4EBB;hide" id="clickHide1"></a>
+                        <a href="#03D257CAE90BB9B0F531;hide" id="clickHide2"></a>
+                        <a href="#04DBE5D4230BB9B39190;hide" id="clickHide3"></a>
+                        <a href="#0DE655208C0BBA9375A5;hide" id="clickHide4"></a>
+                        <a href="#0D765CE9AC0BBA976F4C;hide" id="clickHide5"></a>
+                        <a href="#039CBC4D420BBA9F123A;hide" id="clickHide6"></a>
+                        <a href="#03891D28600BBAB5F32C;hide" id="clickHide7"></a>
+                        <a href="#0CD9DB6BAA0BBAF47491;show" id="clickShow8"></a>
+                        <a href="#0F58FA0E090BBAF6C900;show" id="clickShow9"></a>
+                        <a href="#02273B58390BBAF8473F;show" id="clickShow10"></a>
+                        <a href="#0EB952BE2B0BBAFA50FF;show" id="clickShow11"></a>
+                        <a href="#0E0893F64B0BBAFC05EE;show" id="clickShow12"></a>
+                        <a href="#02575042A80BBB4D79E5;hide" id="clickHide13"></a>
+                        <a href="#0FD9F8EAFB0BBB4E2E6E;hide" id="clickHide14"></a>
+                        <a href="#0A526306170BBB4E8065;hide" id="clickHide15"></a>
+                        <a href="#052614BAE80BBB4F5916;hide" id="clickHide16"></a>
+                        <a href="#02A82A64E60BBB5FC231;hide" id="clickHide17"></a>	
+					</div>				
+				</div>
+            </main>	
+		</div>		
+    </body>
+	<script>
+    var vid = document.getElementById("videoI");
+    vid.ontimeupdate = function() {clickCam()};
+    function clickCam() {
+        if (vid.currentTime >= 2 && vid.currentTime <= 2.5){
+        document.getElementById('click1').click();
+        }
+        if (vid.currentTime >= 12 && vid.currentTime <= 12.5){
+        document.getElementById('click2').click();
+        }
+        if (vid.currentTime >= 38 && vid.currentTime <= 38.5){
+        document.getElementById('click3').click();
+        }
+        if (vid.currentTime >= 49 && vid.currentTime <= 49.5){
+        document.getElementById('click4').click();
+        }
+        if (vid.currentTime >= 115 && vid.currentTime <= 115.5){
+        document.getElementById('click5').click();
+        }
+        if (vid.currentTime >= 165 && vid.currentTime <= 165.5){
+        document.getElementById('click6').click();
+        }
+        if (vid.currentTime >= 190 && vid.currentTime <= 190.5){
+        document.getElementById('click7').click();
+        }
+        if (vid.currentTime >= 228 && vid.currentTime <= 228.5){
+        document.getElementById('click8').click();
+        }
+        if (vid.currentTime >= 237 && vid.currentTime <= 237.5){
+        document.getElementById('click9').click();
+        }
+        if (vid.currentTime >= 275 && vid.currentTime <= 275.5){
+        document.getElementById('click10').click();
+        }
+        if (vid.currentTime >= 305 && vid.currentTime <= 305.5){
+        document.getElementById('click11').click();
+        }
+        if (vid.currentTime >= 309 && vid.currentTime <= 309.5){
+        document.getElementById('click12').click();
+        }				
+    };
+    </script>
+    <script>
+        window.onload = function() { 
+        document.getElementById('clickHide1').click();
+        document.getElementById('clickHide2').click();
+        document.getElementById('clickHide3').click();
+        document.getElementById('clickHide4').click();
+        document.getElementById('clickHide5').click();
+        document.getElementById('clickHide6').click();
+        document.getElementById('clickHide7').click(); 
+        document.getElementById('clickShow8').click(); 
+        document.getElementById('clickShow9').click(); 
+        document.getElementById('clickShow10').click(); 
+        document.getElementById('clickShow11').click(); 
+        document.getElementById('clickShow12').click(); 
+        document.getElementById('clickHide13').click();
+        document.getElementById('clickHide14').click();
+        document.getElementById('clickHide15').click();
+        document.getElementById('clickHide16').click();
+        document.getElementById('clickHide17').click(); 	  	  
+    };
+    </script>		
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>	
+</html>
