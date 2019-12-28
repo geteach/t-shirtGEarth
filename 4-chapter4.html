@@ -22,9 +22,9 @@
                 document.getElementById('playIcon').innerHTML = '<i class="material-icons">pause</i>';
                 document.getElementById('playButton').innerHTML = 'Pause';
                 document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">pause</i>';
-                playTour();	
+                playTour();
                 }
-            };    
+            };
             function playTour() {
             var videoI = document.getElementById("videoI");
                 if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
@@ -32,19 +32,19 @@
                 videoI.play();
                 };
                 videoI.onended = function() {
-                videoI.load();   
+                videoI.load();
                 document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
                 document.getElementById('playButton').innerHTML = 'Play';
                 document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
-                };							
+                };
             };
             function getRemainingTime(){
                 window.clearTimeout(timerId);
                 document.getElementById("videoI").pause();
                 timerStep -= ( (new Date()).getTime() - startTimeMS );
-            };				
-            window.onload = playTour;						
-        </script>					
+            };
+            window.onload = playTour;
+        </script>
     </head>
     <body>
         <div id="container">
@@ -57,23 +57,23 @@
                     <span class="mediaIcon mdl-color-text--white" id="mediaIcon">
                         <i class="material-icons">play_arrow</i>
                     </span>
-                </div>	
-                <div class="content">		
-                    <div class="title">					
+                </div>
+                <div class="content">
+                    <div class="title">
                         Chapter 4 - Boxes
-                    </div>	
+                    </div>
                     <div class="snippet">
                         The unsung innovation at the heart of the global economy
-                    </div>			
+                    </div>
                     <span onclick="playPause()" class="mdl-chip mdl-chip--contact" id="playSpan">
                         <span class="mdl-chip__contact mdl-color-text--white" id="playIcon"><i class="material-icons">play_arrow</i></span>
                         <span class="mdl-chip__text" id="playButton">Play</span>
-                    </span>		
-                    <div class="description">		
+                    </span>
+                    <div class="description">
                         <p class="text">The Planet Money T-shirts traveled around the world on their way to you. The women’s shirt was made in Colombia, from cotton grown in the U.S. The men’s shirt was made in Indonesia and Bangladesh.</p>
                         <p class="text">Explain how the shipping container has made t-shirts, and just about everything we buy, cheeper. Read this <a href="https://apps.npr.org/tshirt/#/boxes" target="_blank">webpage</a> to help develop a more complete response.</p>
                         <hr>
-                        <p class="text">Credit: NPR's <a href="https://apps.npr.org/tshirt/#/title" target="_blank">Planet Money Makes a T-Shirt</a>...Please do not forget to support you local <a href="http://www.npr.org/stations/" target="_blank">NPR Public Radio Station</a>.</p>		
+                        <p class="text">Credit: NPR's <a href="https://apps.npr.org/tshirt/#/title" target="_blank">Planet Money Makes a T-Shirt</a>...Please do not forget to support you local <a href="http://www.npr.org/stations/" target="_blank">NPR Public Radio Station</a>.</p>
                     </div>
                 </div>
                 <div class="footer">
@@ -87,9 +87,9 @@
                         <a href="#02575042A80BBB4D79E5;Flyto" id="click2"></a>
                         <a href="#0FD9F8EAFB0BBB4E2E6E;Flyto" id="click3"></a>
                         <a href="#0A526306170BBB4E8065;Flyto" id="click4"></a>
-                        <a href="#053B5322E40BBB4EE3DE;Flyto" id="click5"></a>	
+                        <a href="#053B5322E40BBB4EE3DE;Flyto" id="click5"></a>
                         <a href="#052614BAE80BBB4F5916;Flyto" id="click6"></a>
-                        <a href="#0282EB77AE0BBB4FF1F5;Flyto" id="click7"></a>				
+                        <a href="#0282EB77AE0BBB4FF1F5;Flyto" id="click7"></a>
                         <a href="#07BB40E5ED0BB9AD4EBB;show" id="clickShow1"></a>
                         <a href="#03D257CAE90BB9B0F531;show" id="clickShow2"></a>
                         <a href="#04DBE5D4230BB9B39190;show" id="clickShow3"></a>
@@ -101,16 +101,16 @@
                         <a href="#0F58FA0E090BBAF6C900;show" id="clickShow9"></a>
                         <a href="#02273B58390BBAF8473F;show" id="clickShow10"></a>
                         <a href="#0EB952BE2B0BBAFA50FF;show" id="clickShow11"></a>
-                        <a href="#0E0893F64B0BBAFC05EE;show" id="clickShow12"></a>	
+                        <a href="#0E0893F64B0BBAFC05EE;show" id="clickShow12"></a>
                         <a href="#02575042A80BBB4D79E5;show" id="clickShow13"></a>
                         <a href="#0FD9F8EAFB0BBB4E2E6E;show" id="clickShow14"></a>
                         <a href="#0A526306170BBB4E8065;show" id="clickShow15"></a>
                         <a href="#052614BAE80BBB4F5916;show" id="clickShow16"></a>
-                        <a href="#02A82A64E60BBB5FC231;show" id="clickShow17"></a>	
-                    </div>				
+                        <a href="#02A82A64E60BBB5FC231;show" id="clickShow17"></a>
+                    </div>
                 </div>
-            </main>	
-        </div>		
+            </main>
+        </div>
     </body>
     <script>
         var vid = document.getElementById("videoI");
@@ -140,14 +140,14 @@
         };
     </script>
     <script>
-        window.onload = function() { 
+        window.onload = function() {
         document.getElementById('clickShow1').click();
         document.getElementById('clickShow2').click();
         document.getElementById('clickShow3').click();
         document.getElementById('clickShow4').click();
         document.getElementById('clickShow5').click();
         document.getElementById('clickShow6').click();
-        document.getElementById('clickShow7').click(); 
+        document.getElementById('clickShow7').click();
         document.getElementById('clickShow8').click();
         document.getElementById('clickShow9').click();
         document.getElementById('clickShow10').click();
@@ -159,6 +159,6 @@
         document.getElementById('clickShow16').click();
         document.getElementById('clickShow17').click();
         };
-    </script>		
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>	
+    </script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </html>
