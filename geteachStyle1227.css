@@ -384,8 +384,8 @@ html::-webkit-scrollbar-track {
 }
 
 .mdl-chip i.material-icons {
-    -webkit-transform: translateY(3px);
-    transform: translateY(3px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
     font-size: 1em
 }
 
