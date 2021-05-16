@@ -7,49 +7,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
         <link rel="stylesheet" href="https://geteach.com/scripts/newearth/geteachStyle1227.css" type="text/css" />
-        <script>
-            var startTimeMS = 0;
-            var timerId;
-            var timerStep;
-            function playPause() {
-                var image = document.getElementById('controlIcon');
-                if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
-                getRemainingTime();
-                document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
-                document.getElementById('playButton').innerHTML = 'Play';
-                document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
-                } else {
-                document.getElementById('playIcon').innerHTML = '<i class="material-icons">pause</i>';
-                document.getElementById('playButton').innerHTML = 'Pause';
-                document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">pause</i>';
-                playTour();
-                }
-            };
-            function playTour() {
-            var videoI = document.getElementById("videoI");
-                if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
-                startTimeMS = (new Date()).getTime();
-                videoI.play();
-                };
-                videoI.onended = function() {
-                videoI.load();
-                document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
-                document.getElementById('playButton').innerHTML = 'Play';
-                document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
-                };
-            };
-            function getRemainingTime(){
-                window.clearTimeout(timerId);
-                document.getElementById("videoI").pause();
-                timerStep -= ( (new Date()).getTime() - startTimeMS );
-            };
-            window.onload = playTour;
-        </script>
     </head>
     <body>
         <div id="container">
             <main class="panelMain">
-                <div class="videoContain" onclick="playPause()">
+                <div class="videoContain mediaPlay">
                     <video class="videoMedia" id="videoI" width="480" height="270" poster="https://storage.googleapis.com/geteachkml4/npr/chapter5Poster.jpg">
                         <source src="https://storage.googleapis.com/geteachkml4/npr/you.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -65,7 +27,7 @@
                     <div class="snippet">
                         Where our shirt starts and ends — and all the betweens
                     </div>
-                    <span onclick="playPause()" class="mdl-chip mdl-chip--contact" id="playSpan">
+                    <span class="mdl-chip mdl-chip--contact mediaPlay" id="playSpan">
                         <span class="mdl-chip__contact mdl-color-text--white" id="playIcon"><i class="material-icons">play_arrow</i></span>
                         <span class="mdl-chip__text" id="playButton">Play</span>
                     </span>
@@ -74,7 +36,7 @@
                         <p class="text">Thanks for taking this t-shirt journey!</p>
                         <p class="text">You can find me on twitter <a href="https://twitter.com/geteach" target="_blank">@geteach</a> or visit my blog <a href="https://geteach.com/blog" target="_blank">geteach.com/blog</a></p>
                         <hr>
-                        <p class="text">Credit: NPR's <a href="https://apps.npr.org/tshirt/#/title" target="_blank">Planet Money Makes a T-Shirt</a>...Please do not forget to support you local <a href="http://www.npr.org/stations/" target="_blank">NPR Public Radio Station</a>.</p>
+                        <p class="text">Credit: NPR's <a href="https://apps.npr.org/tshirt/#/title" target="_blank">Planet Money Makes a T-Shirt</a>...Please do not forget to support your local <a href="http://www.npr.org/stations/" target="_blank">NPR Public Radio Station</a>.</p>
                     </div>
                 </div>
                 <div class="footer">
@@ -106,6 +68,49 @@
             </main>
         </div>
     </body>
+	<script>
+		var mediaPlay = document.getElementsByClassName("mediaPlay");
+		for (var i = 0; i < mediaPlay.length; i++) {
+			mediaPlay[i].addEventListener('click', playPause, false);
+		};
+		
+		var startTimeMS = 0;
+		var timerId;
+		var timerStep;
+		function playPause() {
+			var image = document.getElementById('controlIcon');
+			if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
+			getRemainingTime();
+			document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+			document.getElementById('playButton').innerHTML = 'Play';
+			document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+			} else {
+			document.getElementById('playIcon').innerHTML = '<i class="material-icons">pause</i>';
+			document.getElementById('playButton').innerHTML = 'Pause';
+			document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">pause</i>';
+			playTour();
+			}
+		};
+		function playTour() {
+		var videoI = document.getElementById("videoI");
+			if (document.getElementById('playIcon').innerHTML  != '<i class="material-icons">play_arrow</i>'){
+			startTimeMS = (new Date()).getTime();
+			videoI.play();
+			};
+			videoI.onended = function() {
+			videoI.load();
+			document.getElementById('playIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+			document.getElementById('playButton').innerHTML = 'Play';
+			document.getElementById('mediaIcon').innerHTML = '<i class="material-icons">play_arrow</i>';
+			};
+		};
+		function getRemainingTime(){
+			window.clearTimeout(timerId);
+			document.getElementById("videoI").pause();
+			timerStep -= ( (new Date()).getTime() - startTimeMS );
+		};
+            window.onload = playTour;
+    </script>
     <script>
         window.onload = function() {
         document.getElementById('clickShow1').click();
